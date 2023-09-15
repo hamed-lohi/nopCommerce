@@ -31,18 +31,335 @@
     <!-- We copy the entire \App_Data directory. But we ignore JSON files and data protection keys  -->
     <Content Include="App_Data\**" CopyToPublishDirectory="PreserveNewest" Exclude="App_Data\*.json" />
     <Content Remove="App_Data\*.json" />
+    <Content Remove="Themes\NobleTheme\**" />
     <Content Update="App_Data\DataProtectionKeys\*.xml" CopyToPublishDirectory="Never" />
 
     <Compile Remove="Plugins\**;Themes\**" />
+
+    <Compile Remove="Themes\NobleTheme\**" />
     <Content Remove="Plugins\**;Themes\**" />
     <EmbeddedResource Remove="Plugins\**;Themes\**" />
+    <EmbeddedResource Remove="Themes\NobleTheme\**" />
     <None Remove="Plugins\**;Themes\**" />
+    <None Remove="Themes\NobleTheme\**" />
     <None Include="Plugins\**" CopyToPublishDirectory="PreserveNewest" Exclude="Plugins\**\runtimes\**;Plugins\**\ref\**;Plugins\**\*.pdb" />
 
     <Content Include="Themes\**" CopyToPublishDirectory="PreserveNewest" CopyToOutputDirectory="Never" />
 
     <!-- We copy the \Logs directory -->
     <Content Include="Logs\**" CopyToPublishDirectory="PreserveNewest" />
+    <Content Remove="Themes\NobleTheme\Content\css\bootstrap-theme.min.css" />
+    <Content Remove="Themes\NobleTheme\Content\css\bootstrap.min.css" />
+    <Content Remove="Themes\NobleTheme\Content\css\font-awesome.min.css" />
+    <Content Remove="Themes\NobleTheme\Content\css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Remove="Themes\NobleTheme\Content\css\noble-responsive.css" />
+    <Content Remove="Themes\NobleTheme\Content\css\noble-style.css" />
+    <Content Remove="Themes\NobleTheme\Content\css\owl.carousel.min.css" />
+    <Content Remove="Themes\NobleTheme\Content\css\print.css" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\fontawesome-webfont.eot" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\fontawesome-webfont.svg" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\fontawesome-webfont.ttf" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\fontawesome-webfont.woff" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\fontawesome-webfont.woff2" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\FontAwesome.otf" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Remove="Themes\NobleTheme\Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Remove="Themes\NobleTheme\Content\images\ajax_loader_large.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\ajax_loader_small.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\animated-overlay.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\arrow-dropdown.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\arrow-up.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\bbeditor-button-bg.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\black-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\breadcrumb-title-border.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\cart-icon.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\cart-white-icon.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\check-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\closelabel.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\compare-button.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\compare-icon.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\continue-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\down-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\drop-down-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\email-button.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\facebook-signing.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\forum-footer-bg.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\ico-close-notification-bar.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ico-delete.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\ie_warning.jpg" />
+    <Content Remove="Themes\NobleTheme\Content\images\left-arrow-active.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\left-arrow-inactive.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\left-dot-active.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\left-dot-inactive.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\loading.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\logo.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\logo.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\nextlabel.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\prevlabel.gif" />
+    <Content Remove="Themes\NobleTheme\Content\images\radio-dot-check.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\radio-dot-uncheck.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\remove.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\search-icon.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\search.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\slider-left-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\slider-right-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\star-x-active.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\star-x-inactive.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\toggle-down-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\toggle-up-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-icons_222222_256x240.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-icons_2e83ff_256x240.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-icons_454545_256x240.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-icons_888888_256x240.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\vote-down-selected.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\vote-down.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\vote-up-selected.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\vote-up.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\white-arrow.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\wishlist-icon.png" />
+    <Content Remove="Themes\NobleTheme\Content\images\wishlist-white-icon.png" />
+    <Content Remove="Themes\NobleTheme\Content\img\glyphicons-halflings-white.png" />
+    <Content Remove="Themes\NobleTheme\Content\img\glyphicons-halflings.png" />
+    <Content Remove="Themes\NobleTheme\Content\js\bootstrap.min.js" />
+    <Content Remove="Themes\NobleTheme\Content\js\head.min.js" />
+    <Content Remove="Themes\NobleTheme\Content\js\noble.js" />
+    <Content Remove="Themes\NobleTheme\Content\js\owl.carousel.min.js" />
+    <Content Remove="Themes\NobleTheme\Content\js\respond.min.js" />
+    <Content Remove="Themes\NobleTheme\Content\js\selectivizr-min.js" />
+    <Content Remove="Themes\NobleTheme\License.txt" />
+    <Content Remove="Themes\NobleTheme\nopAccelerate-Noble-Theme.png" />
+    <Content Remove="Themes\NobleTheme\Release note.txt" />
+    <Content Remove="Themes\NobleTheme\theme.json" />
+    <Content Remove="Themes\NobleTheme\Views\BackInStockSubscription\CustomerSubscriptions.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\BackInStockSubscription\SubscribePopup.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Blog\BlogPost.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Blog\Components\BlogMonths\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Blog\Components\BlogTags\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Blog\List.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\ActiveDiscussions.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\Components\ForumActiveDiscussionsSmall\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\Components\ForumBreadcrumb\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\Components\ForumLastPost\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\CustomerForumSubscriptions.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\Forum.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\ForumGroup.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\Index.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\PostCreate.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\PostEdit.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\Search.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\Topic.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\TopicCreate.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\TopicEdit.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\TopicMove.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\_ActiveTopics.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\_CreateUpdatePost.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\_CreateUpdateTopic.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\_ForumGroup.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\_ForumHeader.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\_ForumPost.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Boards\_SearchBox.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\CategoryTemplate.ProductsInGridOrLines.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\ManufacturerAll.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\ManufacturerTemplate.ProductsInGridOrLines.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\ProductsByTag.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\ProductTagsAll.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\Search.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\Vendor.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\VendorAll.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\_CatalogFilters.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\_CatalogProducts.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\_CatalogSelectors.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\_FilterManufacturerBox.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\_FilterPriceBox.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\_FilterSpecsBox.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Catalog\_ProductsInGridOrLines.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\BillingAddress.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\Completed.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\Confirm.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\OnePageCheckout.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\OpcBillingAddress.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\OpcConfirmOrder.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\OpcPaymentInfo.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\OpcPaymentMethods.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\OpcShippingAddress.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\OpcShippingMethods.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\PaymentInfo.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\PaymentMethod.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\ShippingAddress.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\ShippingMethod.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Checkout\_PickupPoints.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Common\ContactUs.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Common\ContactVendor.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Common\PageNotFound.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Common\Sitemap.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Common\StoreClosed.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\AccountActivation.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\AddressAdd.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\AddressEdit.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\Addresses.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\Avatar.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\ChangePassword.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\CheckGiftCardBalance.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\ConfigureMultiFactorAuthenticationProvider.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\DownloadableProducts.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\EmailRevalidation.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\GdprTools.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\Info.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\Login.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\MultiFactorAuthentication.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\MultiFactorVerification.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\PasswordRecovery.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\PasswordRecoveryConfirm.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\Register.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\RegisterResult.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\UserAgreement.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\_CheckUsernameAvailability.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\_CustomerAttributes.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\_ExternalAuthentication.Errors.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Customer\_MultiFactorAuthenticationProviders.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Home\Index.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Install\Index.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Install\_Install.ConnectionString.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Install\_ViewImports.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Newsletter\SubscriptionActivation.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\News\List.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\News\NewsItem.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Order\CustomerOrders.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Order\CustomerRewardPoints.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Order\Details.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Order\ShipmentDetails.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\PrivateMessages\Index.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\PrivateMessages\SendPM.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\PrivateMessages\ViewPM.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\CompareProducts.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\CustomerProductReviews.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\NewProducts.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\ProductEmailAFriend.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\ProductReviews.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\ProductTemplate.Grouped.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\ProductTemplate.Simple.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\RecentlyViewedProducts.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_AddToCart.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_AddToWishlist.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_Availability.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_BackInStockSubscription.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_CompareProductsButton.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_DeliveryInfo.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_Discontinued.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_DownloadSample.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_GiftCardInfo.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_Microdata.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductAttributes.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductBreadcrumb.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductDetailsPictures.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductEmailAFriendButton.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductEstimateShipping.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductManufacturers.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductPrice.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductReviewHelpfulness.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductReviewOverview.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductSpecifications.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductTags.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ProductTierPrices.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_RentalInfo.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_ShareButton.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Product\_SKU_Man_GTIN_Ven.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Profile\Components\ProfileInfo\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Profile\Components\ProfilePosts\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Profile\Index.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\ReturnRequest\CustomerReturnRequests.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\ReturnRequest\ReturnRequest.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\AdminHeaderLinks\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\BlogRssHeaderLink\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\CategoryNavigation\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\CheckoutProgress\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\CrossSellProducts\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\CurrencySelector\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\CustomerNavigation\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\EstimateShipping\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\EuCookieLaw\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\ExternalMethods\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\Favicon\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\FlyoutShoppingCart\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\Footer\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\HeaderLinks\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\HomepageBestSellers\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\HomepageCategories\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\HomepageNews\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\HomePagePolls\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\HomepageProducts\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\LanguageSelector\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\Logo\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\ManufacturerNavigation\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\NewsletterBox\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\NewsRssHeaderLink\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\OrderSummary\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\OrderTotals\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\PollBlock\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\PopularProductTags\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\PrivateMessagesInbox\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\PrivateMessagesSentItems\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\ProductsAlsoPurchased\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\RecentlyViewedProductsBlock\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\RelatedProducts\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\SearchBox\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\SelectedCheckoutAttributes\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\ShoppingCartEstimateShipping\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\SocialButtons\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\StoreThemeSelector\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\TaxTypeSelector\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\TopicBlock\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\TopMenu\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\VendorNavigation\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Components\Widget\Default.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Error.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Head.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\Header.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\OldInternetExplorerWarning.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_AddressAttributes.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_CategoryLine.Navigation.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_CategoryLine.TopMenu.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_CategorySubCategoryLine.TopMenu.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_CheckoutAttributes.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_ColumnsOne.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_ColumnsTwo.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_CreateOrUpdateAddress.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_DiscountBox.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_EstimateShippingPopUp.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_Header.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_JavaScriptDisabledWarning.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_Notifications.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_OldInternetExplorerWarning.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_OrderReviewData.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_Poll.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_Print.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_ProductBox.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_Root.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_Root.Head.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Shared\_SubCategoryLine.TopMenu.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\ShoppingCart\Cart.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\ShoppingCart\EmailWishlist.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\ShoppingCart\Wishlist.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\ShoppingCart\_EstimateShippingResult.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\ShoppingCart\_GiftCardBox.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Topic\TopicDetails.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Vendor\ApplyVendor.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Vendor\Info.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\Vendor\_VendorAttributes.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\_ViewImports.cshtml" />
+    <Content Remove="Themes\NobleTheme\Views\_ViewStart.cshtml" />
     <None Remove="Plugins\Uploaded\placeholder.txt" />
     <Content Include="Plugins\Uploaded\placeholder.txt">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
@@ -61,6 +378,651 @@
     in order to avoid the "Duplicate dll" error during publication. 
     We can also use “ExcludeConfigFilesFromBuildOutput” according to https://github.com/aspnet/AspNetCore/issues/14017 -->
     <Content Update="**\*.config;**\*.json" CopyToOutputDirectory="Never" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Themes\SahaTheme\Content\css\print.css">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Themes\SahaTheme\Content\css\styles.css">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Themes\SahaTheme\Content\css\styles.rtl.css">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\BackInStockSubscription\CustomerSubscriptions.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\BackInStockSubscription\SubscribePopup.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Blog\BlogPost.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Blog\Components\BlogMonths\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Blog\Components\BlogTags\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Blog\List.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\ActiveDiscussions.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\Components\ForumActiveDiscussionsSmall\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\Components\ForumBreadcrumb\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\Components\ForumLastPost\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\CustomerForumSubscriptions.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\Forum.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\ForumGroup.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\PostCreate.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\PostEdit.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\Search.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\Topic.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\TopicCreate.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\TopicEdit.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\TopicMove.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\_ActiveTopics.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\_CreateUpdatePost.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\_CreateUpdateTopic.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\_ForumGroup.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\_ForumHeader.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\_ForumPost.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Boards\_SearchBox.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\CategoryTemplate.ProductsInGridOrLines.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\ManufacturerAll.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\ManufacturerTemplate.ProductsInGridOrLines.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\NewProducts.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\ProductsByTag.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\ProductTagsAll.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\Search.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\Vendor.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\VendorAll.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\_CatalogFilters.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\_CatalogProducts.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\_CatalogSelectors.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\_FilterManufacturerBox.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\_FilterPriceBox.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\_FilterSpecsBox.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Catalog\_ProductsInGridOrLines.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\BillingAddress.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\Completed.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\Confirm.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\OnePageCheckout.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\OpcBillingAddress.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\OpcConfirmOrder.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\OpcPaymentInfo.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\OpcPaymentMethods.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\OpcShippingAddress.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\OpcShippingMethods.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\PaymentInfo.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\PaymentMethod.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\ShippingAddress.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\ShippingMethod.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Checkout\_PickupPoints.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Common\ContactUs.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Common\ContactVendor.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Common\PageNotFound.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Common\Sitemap.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Common\StoreClosed.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\AccountActivation.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\AddressAdd.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\AddressEdit.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\Addresses.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\Avatar.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\ChangePassword.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\CheckGiftCardBalance.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\ConfigureMultiFactorAuthenticationProvider.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\DownloadableProducts.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\EmailRevalidation.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\GdprTools.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\Info.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\Login.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\MultiFactorAuthentication.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\MultiFactorVerification.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\PasswordRecovery.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\PasswordRecoveryConfirm.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\Register.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\RegisterResult.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\UserAgreement.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\_CheckUsernameAvailability.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\_CustomerAttributes.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\_ExternalAuthentication.Errors.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Customer\_MultiFactorAuthenticationProviders.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Home\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Install\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Install\_Install.ConnectionString.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Install\_ViewImports.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Newsletter\SubscriptionActivation.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\News\List.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\News\NewsItem.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Order\CustomerOrders.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Order\CustomerRewardPoints.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Order\Details.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Order\ShipmentDetails.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\PrivateMessages\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\PrivateMessages\SendPM.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\PrivateMessages\ViewPM.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\CompareProducts.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\CustomerProductReviews.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\ProductEmailAFriend.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\ProductReviews.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\ProductTemplate.Grouped.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\ProductTemplate.Simple.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\RecentlyViewedProducts.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_AddToCart.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_AddToWishlist.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_Availability.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_BackInStockSubscription.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_CompareProductsButton.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_DeliveryInfo.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_Discontinued.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_DownloadSample.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_GiftCardInfo.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_Microdata.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductAttributes.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductBreadcrumb.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductDetailsPictures.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductDetailsVideos.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductEmailAFriendButton.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductEstimateShipping.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductManufacturers.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductPrice.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductReviewHelpfulness.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductReviewOverview.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductSpecifications.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductTags.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ProductTierPrices.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_RentalInfo.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_ShareButton.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Product\_SKU_Man_GTIN_Ven.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Profile\Components\ProfileInfo\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Profile\Components\ProfilePosts\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Profile\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\ReturnRequest\CustomerReturnRequests.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\ReturnRequest\ReturnRequest.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\AdminHeaderLinks\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\BlogRssHeaderLink\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\CategoryNavigation\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\CheckoutProgress\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\CrossSellProducts\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\CurrencySelector\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\CustomerNavigation\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\EuCookieLaw\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\ExternalMethods\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\Favicon\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\FlyoutShoppingCart\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\Footer\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\HeaderLinks\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\HomepageBestSellers\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\HomepageCategories\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\HomepageNews\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\HomepagePolls\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\HomepageProducts\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\LanguageSelector\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\Logo\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\ManufacturerNavigation\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\NewsletterBox\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\NewsRssHeaderLink\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\OrderSummary\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\OrderTotals\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\PollBlock\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\PopularProductTags\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\PrivateMessagesInbox\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\PrivateMessagesSentItems\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\ProductsAlsoPurchased\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\RecentlyViewedProductsBlock\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\RelatedProducts\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\SearchBox\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\SelectedCheckoutAttributes\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\ShoppingCartEstimateShipping\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\SocialButtons\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\StoreThemeSelector\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\TaxTypeSelector\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\TopicBlock\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\TopMenu\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\VendorNavigation\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Components\Widget\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\Head.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_AddressAttributes.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_CheckoutAttributes.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_ColumnsOne.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_ColumnsTwo.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_CreateOrUpdateAddress.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_DiscountBox.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_EstimateShippingPopUp.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_Header.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_JavaScriptDisabledWarning.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_Notifications.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_OldInternetExplorerWarning.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_OrderReviewData.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_Poll.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_Print.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_ProductBox.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_Root.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Shared\_Root.Head.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\ShoppingCart\Cart.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\ShoppingCart\EmailWishlist.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\ShoppingCart\Wishlist.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\ShoppingCart\_GiftCardBox.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Topic\TopicDetails.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Vendor\ApplyVendor.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Vendor\Info.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\Vendor\_VendorAttributes.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\_ViewImports.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Themes\SahaTheme\Views\_ViewStart.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
   </ItemGroup>
 
   <!-- This target execute after "Build" target.

@@ -71,15 +71,14 @@
             <div class="title">
                 <strong>@T("Footer.CustomContactUs")</strong>
             </div>
-              <ul class="list">
+
                  @if (Model.DisplayContactUsFooterItem)
                 {
-                    <li>@await Component.InvokeAsync(typeof(TopicBlockViewComponent), new { systemName = "ContactUs" })</li>
+                    @await Component.InvokeAsync(typeof(TopicBlockViewComponent), new { systemName = "ContactUs" })
                     
                 }
-              </ul>
             
-            <!-- <ul class="list">
+        @*      <ul class="list">
                 
                 @if (Model.DisplayCustomerInfoFooterItem)
                 {
@@ -109,7 +108,7 @@
                 {
                     <li><a href="@(Url.RouteUrl<Topic>(new { SeName = topic.SeName }))">@topic.Name</a></li>
                 }
-            </ul> -->
+            </ul>  *@
         </div>
         <div class="footer-block follow-us">
             <div class="social">

@@ -1,6 +1,6 @@
 ﻿{
-  "SystemName": "SahaTheme",
-  "FriendlyName": "Saha theme",
+  "SystemName": "SahaThemeRaw",
+  "FriendlyName": "Saha theme Raw",
   "SupportRTL": true,
   "PreviewImageUrl": "~/Themes/DefaultClean/preview.jpg",
   "PreviewText": "The 'SahaTheme' site theme"

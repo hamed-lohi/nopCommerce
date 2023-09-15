@@ -1,6 +1,7 @@
 ﻿<div class="header">
     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderBefore })
     <div class="header-upper">
+        @await Component.InvokeAsync(typeof(TopicBlockViewComponent), new { systemName = "PhoneInHeader" })
         <div class="header-selectors-wrapper">
             @await Component.InvokeAsync(typeof(TaxTypeSelectorViewComponent))
             @await Component.InvokeAsync(typeof(CurrencySelectorViewComponent))
